@@ -1,4 +1,4 @@
-//sum the number and print usinf java
+//sum the number and print using java
 public class Main {
     public static void main (String args[]){
     int b=4;
