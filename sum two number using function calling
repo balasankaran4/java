@@ -1,0 +1,15 @@
+// sum two number using java in function
+import java.util.*;
+public class Sum {
+public int Number()    
+    {
+    Scanner in =new Scanner (System.in);
+    int a=in.nextInt();    
+    int b=in.nextInt();
+    return a+b;
+    }
+    public static void main (String args[]){
+        Sum b=new Sum();
+        System.out.print(b.Number());   
+    }
+}
