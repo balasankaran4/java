@@ -1,0 +1,67 @@
+abstract class BankAccount{
+    String accountNumber;
+    String holderName;
+    double balance;
+     public BankAccount(String accountNumber,String holderName,double balance){
+        this.accountNumber=accountNumber;
+        this.holderName =holderName;
+        this.balance=balance;
+     }
+     abstract double calculateInterest ();
+      void deposit (int amount){
+       balance =balance+amount;
+       System.out.println("Deposited\t:"+ amount +"\nNew Balance\t:"+balance);
+      }
+       void withdraw (double amount){
+           if(amount<=balance){
+               balance =balance -amount;
+               System.out.println("Withdraw\t:"+ amount +"\nNew Balance\t:"+balance); 
+           }
+           else{
+               System.out.println("Insaficient balance"); 
+           }
+       }
+   }
+    
+    class Savings extends BankAccount{
+        Savings (String accountNumber ,String holderName,double balance){
+           super(accountNumber,holderName,balance);
+        
+        }
+        
+       @Override
+       double calculateInterest() {
+           return balance * 0.02;
+       }
+    }
+    class CurrentAccount extends BankAccount{
+           CurrentAccount(String accountNumber ,String holderName,double balance){
+            super(accountNumber,holderName,balance);
+        
+       }
+       
+       @Override
+       double calculateInterest() {
+           
+           return balance * 0.04;
+           
+       }
+   }
+
+   public class BankSystem{
+       public static void main(String[]args){
+           BankAccount savings= new Savings("SA123","chalse",10000);
+           BankAccount current= new CurrentAccount("CA456","David",5000);
+           System.out.println("Savings Account Details");
+           System.out.println("Savings Account Intersect :"+ savings.calculateInterest());
+           savings.withdraw(3000);
+           System.out.println();
+           System.out.println("Current Account Details");
+           System.out.println("Current Account  :"+ current.calculateInterest());
+           current.deposit(7000);
+           current.withdraw(5000);
+       }
+   }
+
+
+
