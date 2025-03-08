@@ -1,0 +1,8 @@
+class Array{
+        public static void main(String[] args) {
+        String arr[][][]={{{"hollow","bala","use"},{"less","onion"},{"string","name","goal"}},{{"nee ","oru","thevidiyaa"}},{{"potta","bunda","ahh"},{"therndhedukapata","thevidiya"},{"mani","navi","java"}}};
+          System.out.println(arr[0][1][0]);
+          System.out.println(arr);
+
+   }
+}
