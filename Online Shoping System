@@ -1,0 +1,48 @@
+abstract class Product{
+    String ProductId;;
+    String ProductName;
+    double Price;
+    Product(String ProductId,String ProductName,double Price){
+       this.ProductId=ProductId;
+        this.ProductName=ProductName;
+        this.Price=Price;
+    }
+    abstract double calculatediscountprice();
+    
+    void displayproductdetails(){
+     System.out.println("Product Id       :"+ProductId);
+     System.out.println("Product Name     :"+ProductName);
+     System.out.println("Oringinal price  :"+Price);
+     System.out.println("Discounted price :"+calculatediscountprice());
+  
+    }
+}
+class Electronics extends Product{
+    Electronics(String ProductId,String ProductName,double Price){
+    super(ProductId,ProductName,Price);
+    }
+    double calculatediscountprice(){
+    return Price-(0.10* Price);
+    }
+}
+class Clothing extends Product{
+    Clothing(String ProductId,String ProductName,double Price){
+    super(ProductId,ProductName,Price);
+    }
+    double calculatediscountprice(){
+    return Price-(0.15 * Price);
+        
+    }
+}
+public class OnlineShoppingTest{
+    public static void main(String[] args){
+        Product laptop=new Electronics("P100","Laptop",45000);
+        Product tshirt=new Clothing("202","Tshirts",50);
+        System.out.println("Laptop Details");
+        laptop.displayproductdetails();
+        System.out.println();
+        System.out.println("Tshirt Details");
+        tshirt.displayproductdetails();
+    }
+}
+
