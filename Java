@@ -1,0 +1,99 @@
+OOPS
+    Object-Oriented Programming or Java OOPs concept refers to programming languages that use objects in programming. 
+    They use objects as a primary source to implement what is to happen in the code. Objects are seen by the viewer or user, performing tasks you assign.
+Class
+      A Class is a user-defined blueprint or prototype from which objects are created. It represents the set of properties or methods that are common to all objects of one type.
+      Using classes, you can create multiple objects with the same behavior instead of writing their code multiple times.
+methods
+      A method is a collection of statements that perform specific tasks and return a result to the caller. 
+      It can be declared with or without arguments, depending on the requirements. 
+      A method an take input values, perform operations, and return a result.
+constructors
+       a Constructor is a block of codes similar to the method. It is called when an instance of the class is created. 
+       At the time of calling the constructor, memory for the object is allocated in the memory. 
+       It is a special type of method that is used to initialize the object. Every time an object is created using the new() keyword, at least one constructor is called.
+   types of constructors
+            Default Constructor
+            Parameterized Constructor
+            Copy Constructor
+abstraction
+      Abstraction in Java is the process of hiding the implementation details and only showing the essential functionality or features to the user.
+      This helps simplify the system by focusing on what an object does rather than how it does it. 
+      The unnecessary details or complexities are not displayed to the user.
+Encapsulation 
+      Encapsulation in Java is a fundamental OOP (object-oriented programming) principle that combines data and methods in a class.
+      It allows implementation details to be hidden while exposing a public interface for interaction.
+
+       Encapsulation is defined as the wrapping up of data under a single unit.
+       It is the mechanism that binds together code and the data it manipulates.
+       Another way to think about encapsulation is, that it is a protective shield that prevents the data from being accessed by the code outside this shield. 
+Inheritance 
+      Inheritance is an important pillar of OOP(Object-Oriented Programming).
+      It is the mechanism in Java by which one class is allowed to inherit the features(fields and methods) of another class.
+      In Java, Inheritance means creating new classes based on existing ones.
+      A class that inherits from another class can reuse the methods and fields of that class.
+      In addition, you can add new fields and methods to your current class as well. 
+   the different types of inheritance
+             Single Inheritance
+             Multilevel Inheritance
+             Hierarchical Inheritance
+             Multiple Inheritance
+             Hybrid Inheritance
+
+   single inheritance
+         In single inheritance, a sub-class is derived from only one super class. 
+         It inherits the properties and behavior of a single-parent class. Sometimes, it is also known as simple inheritance
+
+    eg:
+          A ------>  B
+  Multilevel Inheritance
+         In Multilevel Inheritance, a derived class will be inheriting a base class, and as well as the derived class also acts as the base class for other classes.
+
+  eg:
+        A -----> B -------> C 
+ Hierarchical Inheritance
+        Hierarchical Inheritance, one class serves as a superclass (base class) for more than one subclass.
+
+  eg:
+                |---> C
+      A ------------> D
+                |---> B
+ Multiple Inheritance
+         In Multiple inheritances, one class can have more than one superclass and inherit features from all parent classes. 
+         Java does not support multiple inheritances with classes
+
+  eg:
+
+                        
+            A ---------|----------- B
+                        C
+Polymorphism
+        The word ‘polymorphism’ means ‘having many forms’. In Java, polymorphism refers to the ability of a message to be displayed in more than one form.
+        This concept is a key feature of Object-Oriented Programming and it allows objects to behave differently based on their specific class type.
+     Types of Java Polymorphism
+              Compile-Time Polymorphism
+              Runtime Polymorphism
+Method Overloading
+         Method Overloading allows different methods to have the same name, but different signatures 
+where the signature can differ by the number of input parameters or type of input parameters, or a mixture of both.
+
+    Different Ways of Method Overloading in Java
+          Changing the Number of Parameters.
+          Changing Data Types of the Arguments.
+          Changing the Order of the Parameters of Methods
+
+  Changing the Number of Parameters
+             Method overloading can be achieved by changing the number of parameters while passing to different methods.
+   Changing Data Types of the Arguments
+             In many cases, methods can be considered Overloaded if they have the same name but have different parameter types, methods are considered to be overloaded.
+  Changing the Order of the Parameters of Methods
+            Method overloading can also be implemented by rearranging the parameters of two or more overloaded methods. 
+           For example, if the parameters of method 1 are (String name, int roll_no) and  the other method is (int roll_no, String name) but both have the same name, 
+              then these 2 methods are considered to be overloaded with different sequences of parameters.
+Overriding 
+        Overriding in Java occurs when a subclass implements a method which is already defined in the superclass or Base Class. 
+        The method in the subclass must have the same signature as in the superclass. It allows the subclass to modify the inherited methods.
+
+  
+
+           
