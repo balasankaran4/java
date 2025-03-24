@@ -1,0 +1,22 @@
+public class StudentGrades {
+    public static void main (String[]args){
+        int [] score={90,98,95,92,89};
+        int total=0,max=score[0],mini=score[0];
+        int countAboveAvrge=0;
+        for(int mark : score){
+            total+=mark;
+            if(mark>max) max=mark;
+            if(mark<mini) mini=mark;
+
+        } 
+        int avrage= total/5;
+        for(int mark:score){
+            if(mark>avrage) countAboveAvrge++;
+        }
+        System.out.println("Average Markes  :"+avrage);
+        System.out.println("Higher Marks    :"+max);
+        System.out.println("Lowest Marks    :"+mini);
+        System.out.println("Student Scoring");
+        System.out.println("above avrage    :"+countAboveAvrge);
+    }
+}
