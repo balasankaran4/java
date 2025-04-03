@@ -1,24 +1,37 @@
-public class InventoryStock {
-    public static  void main(String[]args){
-        int Stock[]={10,74,93,0,63,7};
-        int max=Stock[0],mini=Stock[0];
-          int miniindexStock=0;
-        int size=Stock.length;
+import java.util.*;
+public class InventoryStock{
+    public static void main (String [] args){
+        Scanner in=new Scanner(System.in);
+        System.out.print("No.of Stocks :");
+        int size=in.nextInt();
+        int []stock=new int[size];
+        System.out.print("Enter the  :");
         for(int i=0;i<size;i++){
-            if(max<Stock[i]) {
-                max=Stock[i];
-            }
-            if(mini>Stock[i]){
-                mini=Stock[i];
-                miniindexStock=i;
-            }
-            if(Stock[i]==0){
-                System.out.println(Stock[i]+"is in Out of Stock");
-            }
-            
+        stock[i]=in.nextInt();
         }
-        System.out.println("Maximum Stock is:"+max);
-        System.out.println("Minimum of the Stock is :"+mini);
-        System.out.println("The Index of the Minimum Stock :"+miniindexStock);
+        int ministock=stock[0];
+        int maxstock=stock[0];
+        int miniindex=0;
+        int maxindex=0;
+        boolean outofstock=false;
+        for(int i=0;i<size;i++){
+            if((ministock>stock[i])&&(stock[i]!=0)){
+                ministock=stock[i];
+                miniindex=i;
+            }
+            if(maxstock<stock[i]){
+                maxstock=stock[i];
+                maxindex=i;
+            }
+            if(stock[i]==0){
+                outofstock=true;
+            }
+        }
+        System.out.println("Minimum Stock :"+ministock);
+        System.out.println("Index of the Minimum stock :"+miniindex);
+        System.out.println("Maximum Stock :"+maxstock);
+        System.out.println("Index of the Maximum Stock :"+maxindex);
+        System.out.println((outofstock?"":"No ")+"Out of Stock is founded");
+        in.close();
     }
 }
