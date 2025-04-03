@@ -1,0 +1,26 @@
+import java.util.*;
+public class VowelConsonant{
+    public static void main (String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter a String :");
+        String input=sc.nextLine();
+        countvowelsAndConsonant(input);
+        sc.close();
+    }
+    public static void countvowelsAndConsonant(String str){
+        str=str.toLowerCase().replaceAll("[^a-z]","");
+        int vowels=0;
+        int consonants=0;
+        String list="aeiou";
+        for(char ch : str.toCharArray()){
+            if(list.indexOf(ch)!=-1){
+                vowels++;
+            }
+            else{
+                consonants++;
+            }
+        }
+        System.out.println("Vowels :"+vowels);
+        System.out.println("Consonants :"+consonants);
+    }
+}
