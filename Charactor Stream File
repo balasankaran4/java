@@ -1,0 +1,15 @@
+import java.io.*;
+public class CharacterStream {
+    public static void main (String []args)throws IOException{
+        FileReader rea=new FileReader ("bala.txt");
+        FileWriter writ=new FileWriter ("sankar.txt");
+        int ch;
+        while((ch=rea.read())!=-1){
+            writ.write(ch);
+        }
+        rea.close();
+        writ.close();
+        System.out.println("File copies using character stream");
+    }
+    
+}
