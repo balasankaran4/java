@@ -1,0 +1,14 @@
+import java.io.*;
+public class ByteStream {
+    public static void main (String []args)throws IOException{
+        FileInputStream in = new FileInputStream ("bala.txt");
+        FileOutputStream out = new FileOutputStream ("output.txt");
+        int b;
+        while ((b=in.read())!=-1){
+            out.write(b);
+        } 
+        in.close();
+        out.close();
+        System.out.println("File copied using byte stream.");
+    }
+}
