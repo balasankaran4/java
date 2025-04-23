@@ -1,0 +1,20 @@
+import java.util.*;
+public class ReverseWords {
+    public static void main (String []args){
+        System.out.print("Give the Sentence :");
+        Scanner sc =new Scanner(System.in);
+        String sentance=sc.nextLine();
+        sc.close();
+        System.out.println("Reversed word  :" +reversewords(sentance));
+    }
+    public static String reversewords(String str){
+        String []word=str.split(" ");
+        StringBuffer result=new StringBuffer();
+        for(String wor:word){
+           StringBuffer sb=new StringBuffer(wor);
+           result.append(sb.reverse()).append(" ");
+        }
+        return result.toString().trim();
+    }
+    
+}
