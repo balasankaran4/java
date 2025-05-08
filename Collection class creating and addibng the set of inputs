@@ -1,0 +1,63 @@
+import java.util.*;
+public class Collection{
+    public static void main(String args[]){
+        ArrayList<String> arrlist=new ArrayList<>();
+        arrlist.add("Apple");
+        arrlist.add("Banana");
+        arrlist.add("Cherry");
+        System.out.println("ArrayList");
+        Iterator<String> arriterat =arrlist.iterator();
+        while(arriterat.hasNext()){
+            System.out.println(arriterat.next());
+        }
+        Vector<String> vect= new Vector<>();
+        vect.add("Giraffe");
+        vect.add("Herse");
+        vect.add("Iguana");
+        System.out.println("\nVector :");
+        Iterator<String> vectoriterat= vect.iterator();
+        while(vectoriterat.hasNext()){
+            System.out.println(vectoriterat.next());
+        }
+        Stack<Integer> stack=new Stack<>();
+        stack.add(37);
+        stack.add(45);
+        stack.add(12);
+        stack.add(67);
+        System.out.println("Stack :");
+        ListIterator<Integer> stackiterat=stack.listIterator(stack.size());
+        while(stackiterat.hasPrevious()){
+            System.out.println(stackiterat.previous());
+        }
+        PriorityQueue <Double> prio=new PriorityQueue<>();
+        prio.add(34.56);
+        prio.add(74.923);
+        prio.add(31.907);
+        prio.add(94.07);
+        System.out.println("\nPriorityQueue by Double :");
+        Iterator<Double> prioiterat= prio.iterator();
+        while(prioiterat.hasNext()){
+            System.out.println(prioiterat.next());
+        }
+        Set<Boolean> set=new HashSet<>();
+        // set.add(true);
+        set.add(false);
+        // set.add(false);
+        set.add(true);
+        System.out.println("\nBoolean of set :");
+        Iterator<Boolean> setiterat= set.iterator();
+        while(setiterat.hasNext()){
+            System.out.println(setiterat.next());
+        }
+        Map<Integer,Double> map=new HashMap<>();
+        map.put(3,45.9568);
+        map.put(764,65.09);
+        map.put(87,63.968);
+        System.out.println("\nMap using integer and the :");
+        Iterator<Map.Entry<Integer,Double>> mapiterat= map.entrySet().iterator();
+        while (mapiterat.hasNext()) {
+            System.out.println(mapiterat.next());
+        }
+
+    }
+}
