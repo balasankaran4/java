@@ -1,0 +1,48 @@
+import java.util.*;
+interface Bilable{
+    public void generateBill(double amount);
+}
+abstract class Discount implements Bilable{
+    abstract public double applyDiscount(double amount);
+
+}
+class RegularCustomer implements Bilable{
+    public void generateBill(double amount){
+        System.out.println(  amount);
+    }
+}
+class Premium extends Discount{
+    public double applyDiscount(double amount){
+        double discount=amount-(amount*0.2);
+        return discount;
+    }
+    public void generateBill(double amount){
+        System.out.println(applyDiscount(amount));
+    }
+}
+class Employee extends Discount{
+    public double applyDiscount(double amount){
+        double discount=amount-(amount*0.3);
+        return discount;
+    }
+    public void generateBill(double amount){
+        System.out.println(applyDiscount(amount));
+    }
+}
+public class Interface {
+public  static void main(String args[]){
+    Scanner in =new Scanner(System.in);
+    System.out.println("Enter the amount");
+    double amo=in.nextDouble();
+    RegularCustomer reg=new RegularCustomer();
+    Premium pre=new Premium();
+    Employee emp=new Employee();
+    System.out.print("Regular customers Bill :");
+    reg.generateBill(amo);
+    System.out.println("Prermium coustomer :");
+    pre.generateBill(amo);
+    System.out.println("Employee Bill:");
+    emp.generateBill(amo);
+    in.close();
+}
+}
